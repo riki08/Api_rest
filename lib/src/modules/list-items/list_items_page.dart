@@ -49,7 +49,12 @@ class CardCharacter extends StatelessWidget {
     return Card(
       elevation: 5,
       child: ListTile(
-        leading: Image.network(_character.image),
+        leading: FadeInImage.assetNetwork(
+            height: 100,
+            width: 60,
+            fit: BoxFit.cover,
+            placeholder: 'images/loading.gif',
+            image: _character.image),
         title: Text(_character.name),
         subtitle: Text(_character.gender),
         trailing: const Icon(Icons.arrow_forward_ios),

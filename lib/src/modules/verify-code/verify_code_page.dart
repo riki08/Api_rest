@@ -46,9 +46,8 @@ class VerifyCodePage extends GetView<VerifyCodeController> {
                         context: context,
                         builder: (context) {
                           return const AlertDialog(
-                            title: Text("Correcto"),
-                            content: Text(
-                                'Tu codigo ha sido validado correctamente'),
+                            title: Text("Alerta"),
+                            content: Text('Tu codigo es incorrecto'),
                           );
                         });
               }, // end onSubmit
