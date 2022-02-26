@@ -1,3 +1,7 @@
+import 'package:api_rest/src/modules/details-item/list_items_binding.dart';
+import 'package:api_rest/src/modules/details-item/list_items_page.dart';
+import 'package:api_rest/src/modules/list-items/list_items_binding.dart';
+import 'package:api_rest/src/modules/list-items/list_items_page.dart';
 import 'package:get/get.dart';
 
 import 'package:api_rest/src/modules/verify-code/verify_code_binding.dart';
@@ -11,15 +15,15 @@ abstract class AppPages {
         name: AppRoutes.verifyCode,
         page: () => const VerifyCodePage(),
         binding: VerifyCodeBinding()),
-    // GetPage(
-    //   name: AppRoutes.onboarding,
-    //   page: () => OnboardingPage(),
-    //   binding: OnboardingBinding(),
-    // ),
-    // GetPage(
-    //   name: AppRoutes.login,
-    //   page: () => LoginPage(),
-    //   binding: LoginBinding(),
-    // ),
+    GetPage(
+      name: AppRoutes.listItems,
+      page: () => const ListItemsPAge(),
+      binding: ListItemsBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.detailsItem,
+      page: () => const DetailsItemPAge(),
+      binding: DetailsItemBinding(),
+    ),
   ];
 }
